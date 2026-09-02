@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Rubik', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    background-color: #050510;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* 
+ * Typography optimized for Hebrew with Nikud (ניקוד):
+ * Prevents double-strokes, artifacts, and clipping of Hebrew vowel marks 
+ */
+.game-font {
+  font-family: 'Rubik', "Luckiest Guy", system-ui, sans-serif;
+  font-weight: 800;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  letter-spacing: normal;
+}
+
+.game-font-clean {
+  font-family: 'Rubik', system-ui, sans-serif;
+  font-weight: 700;
+  text-shadow: none !important;
+  letter-spacing: normal !important;
+}
+
+.game-font-subtle {
+  font-family: 'Rubik', system-ui, sans-serif;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.niqud-title {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 900;
+  line-height: 1.35;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Iconic 3D Brawl Yellow Battle Button */
+.btn-brawl {
+  background: linear-gradient(to bottom, #ffeb3b, #f57f17);
+  border-bottom: 6px solid #bf360c;
+  text-shadow: 0 1px 2px #bf360c;
+  transition: all 0.1s ease;
+}
+
+.btn-brawl:hover {
+  background: linear-gradient(to bottom, #fff176, #fbc02d);
+  filter: brightness(1.05);
+}
+
+.btn-brawl:active {
+  border-bottom-width: 2px;
+  transform: translateY(4px);
+}
+
+/* 3D Chunky Blue Arcade Button (Shop/Chest/Menu) */
+.btn-arcade-blue {
+  background: #1a237e;
+  border-bottom: 6px solid #0d47a1;
+  transition: all 0.1s ease;
+}
+.btn-arcade-blue:hover {
+  background: #283593;
+}
+.btn-arcade-blue:active {
+  border-bottom-width: 2px;
+  transform: translateY(4px);
+}
+
+/* 3D Chunky Green Arcade Button (Play Again/Confirm) */
+.btn-arcade-green {
+  background: #2e7d32;
+  border-bottom: 6px solid #1b5e20;
+  transition: all 0.1s ease;
+}
+.btn-arcade-green:hover {
+  background: #388e3c;
+}
+.btn-arcade-green:active {
+  border-bottom-width: 2px;
+  transform: translateY(4px);
+}
+
+/* 3D Chunky Red Arcade Button (Defeat/Exit) */
+.btn-arcade-red {
+  background: #c62828;
+  border-bottom: 6px solid #b71c1c;
+  transition: all 0.1s ease;
+}
+.btn-arcade-red:hover {
+  background: #d32f2f;
+}
+.btn-arcade-red:active {
+  border-bottom-width: 2px;
+  transform: translateY(4px);
+}
+
+/* 3D Chunky Amber/Gold Arcade Button */
+.btn-arcade-amber {
+  background: linear-gradient(to bottom, #f59e0b, #d97706);
+  border-bottom: 6px solid #92400e;
+  text-shadow: 0 1px 2px #78350f;
+  transition: all 0.1s ease;
+}
+.btn-arcade-amber:hover {
+  background: linear-gradient(to bottom, #fbbf24, #f59e0b);
+}
+.btn-arcade-amber:active {
+  border-bottom-width: 2px;
+  transform: translateY(4px);
+}
+
+/* Immersive Card Glow & Backgrounds */
+.card-glow {
+  box-shadow: 0 0 24px rgba(59, 130, 246, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+}
+
+.card-glow-amber {
+  box-shadow: 0 0 24px rgba(245, 158, 11, 0.3);
+  border: 2px solid rgba(251, 191, 36, 0.3);
+}
+
+.char-slot-active {
+  border: 3px solid #facc15 !important;
+  background: rgba(250, 204, 21, 0.15) !important;
+  box-shadow: 0 0 22px rgba(250, 204, 21, 0.35);
+}
+
+/* Stat Bar backgrounds and fills from design */
+.stat-bar-bg {
+  width: 100%;
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.stat-fill-hp {
+  height: 100%;
+  background: linear-gradient(to right, #22c55e, #4ade80);
+  border-radius: 9999px;
+  box-shadow: 0 0 8px #22c55e;
+  transition: width 0.3s ease;
+}
+
+.stat-fill-atk {
+  height: 100%;
+  background: linear-gradient(to right, #ef4444, #f87171);
+  border-radius: 9999px;
+  box-shadow: 0 0 8px #ef4444;
+  transition: width 0.3s ease;
+}
+
+.stat-fill-spd {
+  height: 100%;
+  background: linear-gradient(to right, #3b82f6, #60a5fa);
+  border-radius: 9999px;
+  box-shadow: 0 0 8px #3b82f6;
+  transition: width 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a4a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}

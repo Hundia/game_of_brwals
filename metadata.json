@@ -1,0 +1,7 @@
+{
+  "name": "Brawl Stars Clone",
+  "description": "משחק ארקייד וקרבות בסגנון בראול סטארס עם דמויות, מערכת סקינים, תיבות וג'ויסטיק",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
